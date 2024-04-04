@@ -1,0 +1,29 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": 2,
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+POST http://localhost:3333/events/a1b1d6ef-6194-42db-be12-1626c6e7be2c/attendees
+Content-Type: application/json
+
+{
+  "name": "Gabriela Moura",
+  "email": "gabrielamoura2@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/a1b1d6ef-6194-42db-be12-1626c6e7be2c
+
+###
+GET http://localhost:3333/attendees/3/badge
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+###
+GET http://localhost:3333/events/a1b1d6ef-6194-42db-be12-1626c6e7be2c/attendees?query=gabriela
